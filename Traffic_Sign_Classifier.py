@@ -171,6 +171,12 @@ print("Number of testing examples =", n_test)
 print("Image data shape =", image_shape)
 print("Number of classes =", n_classes)
 
+length = len(X_train)
+f,ax = plt.subplots(10, 10, figsize=(20,10))
+for i in range(10):
+    for j in range(10):
+        ax[i,j].imshow(X_train[(i+1)*(j+1)])
+        plt.imshow(X_train[i])
 
 EPOCHS = 10
 BATCH_SIZE = 128
